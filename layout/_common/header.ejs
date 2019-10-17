@@ -1,8 +1,8 @@
 <header class="header" itemscope itemtype="http://schema.org/WPHeader">
   <div class="slimContent">
     <div class="navbar-header">
-      <% if(theme.profile && theme.profile.enabled) { %>
-      <% var profile = theme.profile; %>
+      <% if(config.profile && config.profile.enabled) { %>
+      <% var profile = config.profile; %>
       <div class="profile-block text-center">
         <a id="avatar" href="<%= profile.follow %>" target="_blank">
           <img class="img-circle img-rotate" src="<%= ( profile.gravatar ? gravatar(profile.gravatar, 128) : url_for(profile.avatar)) %>" width="200" height="200">
@@ -21,13 +21,13 @@
       </button>
     </div>
     <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
-      <ul class="nav navbar-nav main-nav <%- theme.config.menu_highlight ? 'menu-highlight' : '' %>">
-        <% for (var i in theme.menu){ %>
+      <ul class="nav navbar-nav main-nav <%- config.menu_highlight ? 'menu-highlight' : '' %>">
+        <% for (var i in config.menu){ %>
         <% var itemName = i.toLowerCase(); %>
         <li class="menu-item menu-item-<%= itemName %>">
-          <a href="<%- url_for(theme.menu[i]) %>">
-            <% if(theme.menu_icons.enable) { %>
-            <i class="icon <%= theme.menu_icons[itemName] %>"></i>
+          <a href="<%- url_for(config.menu[i]) %>">
+            <% if(config.menu_icons.enable) { %>
+            <i class="icon <%= config.menu_icons[itemName] %>"></i>
             <% } %>
             <span class="menu-title"><%= __('menu.'+i) %></span>
           </a>

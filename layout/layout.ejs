@@ -3,11 +3,11 @@
 <%- partial('_common/head', {post: page}) %>
 <% 
 	var bodyClass = 'main-center'; 
-	if (theme.config.layout) {
-		bodyClass = theme.config.layout;
+	if (config.layout) {
+		bodyClass = config.layout;
 	}
-  if (theme.config.skin) {
-    bodyClass += ' ' + theme.config.skin;
+  if (config.skin) {
+    bodyClass += ' ' + config.skin;
   }
 	bodyClass = page.sidebar === 'none' ? (bodyClass + ' no-sidebar') : bodyClass;
 %>
