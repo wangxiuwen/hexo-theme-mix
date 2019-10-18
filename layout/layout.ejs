@@ -1,23 +1,23 @@
 <!DOCTYPE html>
-<html<%= config.language ? " lang=" + config.language.substring(0, 2) : ""%>>
+<html<%= theme.language ? " lang=" + theme.language.substring(0, 2) : ""%>>
 <%- partial('_common/head', {post: page}) %>
 <% 
 	var bodyClass = 'main-center'; 
-	if (config.layout) {
-		bodyClass = config.layout;
+	if (theme.layout) {
+		bodyClass = theme.layout;
 	}
-  if (config.skin) {
-    bodyClass += ' ' + config.skin;
+  if (theme.skin) {
+    bodyClass += ' ' + theme.skin;
   }
 	bodyClass = page.sidebar === 'none' ? (bodyClass + ' no-sidebar') : bodyClass;
 %>
 <body class="<%= bodyClass %>" itemscope itemtype="http://schema.org/WebPage">
-  <%- partial('_common/header', null, {cache: !config.relative_link}) %>
+  <%- partial('_common/header', null, {cache: !theme.relative_link}) %>
   <% if (theme.sidebar && (page.sidebar!='none' || page.sidebar!='custom')){ %>
-    <%- partial('_partial/sidebar', null, {cache: !config.relative_link}) %>
+    <%- partial('_partial/sidebar', null, {cache: !theme.relative_link}) %>
   <% } %>
   <%- body %>
-  <%- partial('_common/footer', null, {cache: !config.relative_link}) %>
+  <%- partial('_common/footer', null, {cache: !theme.relative_link}) %>
   <%- partial('_common/script', {post: page}) %>
 </body>
 </html>

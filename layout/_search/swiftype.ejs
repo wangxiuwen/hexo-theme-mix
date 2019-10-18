@@ -4,7 +4,7 @@
 e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
 })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
 
-_st('install','<%= config.search.swiftype %>','2.0.0');
+_st('install','<%= theme.search.swiftype %>','2.0.0');
 </script>
 <style>
     .st-ui-injected-overlay-container,
@@ -12,15 +12,15 @@ _st('install','<%= config.search.swiftype %>','2.0.0');
         font-family: inherit !important;
     }
     section.st-ui-content.st-search-results a.st-ui-result .st-ui-type-heading {
-        color: <%= config.theme_color %> !important;
+        color: <%= theme.theme_color %> !important;
     }
     .st-ui-injected-overlay-container .st-ui-header input[type="text"]:focus {
-        border-bottom: 2px solid <%= config.theme_color %>;
+        border-bottom: 2px solid <%= theme.theme_color %>;
     }
     .st-ui-injected-overlay-container .st-ui-footer a.st-ui-pagination-link {
-        color: <%= config.theme_color %>;
+        color: <%= theme.theme_color %>;
     }
     .st-ui-injected-overlay-container .st-ui-footer a.st-ui-pagination-link span.st-ui-arrow {
-        border-color: <%= config.theme_color %>;
+        border-color: <%= theme.theme_color %>;
     }
 </style>

@@ -1,4 +1,4 @@
-<% if (config.pv.busuanzi.enable) { %>
+<% if (theme.pv.busuanzi.enable) { %>
 	<span class="article-read hidden-xs">
 	    <i class="icon icon-eye-fill" aria-hidden="true"></i>
 	    <span id="busuanzi_container_page_pv">
@@ -6,7 +6,7 @@
 		</span>
 	</span>
 <% } %>
-<% if(config.comment.type == 'valine' && config.comment.valine.visitor) { %>
+<% if(theme.comment.type == 'valine' && theme.comment.valine.visitor) { %>
 	<span class="article-read hidden-xs">
     	<i class="icon icon-eye-fill" aria-hidden="true"></i>
     	<span id="<%- url_for(post.path) %>" class="leancloud_visitors"  data-flag-title="<%= post.title %>">
