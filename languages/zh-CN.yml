@@ -2,6 +2,7 @@ menu:
   Home: 首页
   Archives: 归档
   Categories: 分类
+  SiteNavs: 网址导航
   Tags: 标签
   Repository: 项目
   Books: 书单
@@ -30,6 +31,7 @@ page:
   movies-desc: 个人喜欢的电影推荐给大家
   links: 友情链接
   links-desc: 欢迎交换链接，可在当前页面留言
+  navs-desc: 有趣的站点
   about: 关于
 pagination: 
   next: 下一页
